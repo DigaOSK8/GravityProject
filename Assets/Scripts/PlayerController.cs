@@ -33,19 +33,19 @@ public class PlayerController : MonoBehaviour {
 
         //anim.SetBool("Grounded", grounded);
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0)) && grounded)
         {
             Jump();
         }        
 
         moveVelocity = 0f;
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0.5f)
         {
             moveVelocity = moveSpeed;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < -0.5f)
         {
             moveVelocity = -moveSpeed;
         }
