@@ -29,21 +29,7 @@ public class PlayerManager : MonoBehaviour {
     void Update()
     {
 
-        if (gravityChange)
-        {
-            gravityChange = false;
-            rigidbody2d.gravityScale = -rigidbody2d.gravityScale;
-            if (rigidbody2d.gravityScale < 0)
-            {
-                direction = -1f;
-            }
-            else
-            {
-                direction = 1f;
-            }
-            transform.localScale = new Vector3(1f, direction, 1f);
-            jumpHeight = -jumpHeight;
-        }
+        SwapGravity();
 
         //anim.SetBool("Grounded", grounded);
 
@@ -88,9 +74,23 @@ public class PlayerManager : MonoBehaviour {
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(direction, GetComponent<Rigidbody2D>().velocity.y);
     }
-
-    private void SwapGravity()
+    
+    public void SwapGravity()
     {
-        
+        if (gravityChange)
+        {
+            gravityChange = false;
+            rigidbody2d.gravityScale = -rigidbody2d.gravityScale;
+            if (rigidbody2d.gravityScale < 0)
+            {
+                direction = -1f;
+            }
+            else
+            {
+                direction = 1f;
+            }
+            transform.localScale = new Vector3(1f, direction, 1f);
+            jumpHeight = -jumpHeight;
+        }
     }
 }

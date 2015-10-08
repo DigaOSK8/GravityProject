@@ -73,7 +73,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6137066
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -81,7 +81,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192082}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dca28d24cf2b7de40a2464e75384df05, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityChange: 0
   moveSpeed: 5
-  jumpHeight: 10
+  jumpHeight: 16
   groundCheck: {fileID: 465674}
   groundCheckRadius: .200000003
   whatIsGround:
@@ -112,7 +112,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dca28d24cf2b7de40a2464e75384df05, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: jumpHeight
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192082}
