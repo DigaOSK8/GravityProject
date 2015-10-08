@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScreenManager : MonoBehaviour
+//it's move camera from one screen to another,
+//it's possible to add some splash screen in middle.
+//if middle is empty it will go to destination after some seconds (set up)
+public class ScreenSwitcher : MonoBehaviour
 {
     public GameObject Camera;
     public GameObject DestinationScreen;
@@ -11,13 +14,12 @@ public class ScreenManager : MonoBehaviour
     private bool started;
     private bool inMiddle;
     private bool done;
-    // Use this for initialization
+
     void Start()
     {
         started = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (started == true)
