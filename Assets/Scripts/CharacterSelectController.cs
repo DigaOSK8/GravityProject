@@ -7,6 +7,7 @@ public class CharacterSelectController : MonoBehaviour
     public GameObject TriangleP2;
     public GameObject CharactersBW;
     public GameObject CharactersColor;
+    public GameObject ScreenSwitcher;
 
     private string axisX;
     private KeyCode buttonA;
@@ -32,6 +33,7 @@ public class CharacterSelectController : MonoBehaviour
         {
             CharactersColor = Instantiate(CharactersColor);
             Destroy(CharactersBW);
+            ((ScreenSwitcher)ScreenSwitcher.GetComponent(typeof(ScreenSwitcher))).Play();
         }
         axisInput = Input.GetAxis(axisX);
 
@@ -49,10 +51,10 @@ public class CharacterSelectController : MonoBehaviour
     }
     private void MoveToRight(GameObject player)
     {
-        player.transform.position = new Vector3(6f, -3.6f, 85);
+        player.transform.position = new Vector3(5.5f, 32f, 85);
     }
     private void MoveToLeft(GameObject player)
     {
-        player.transform.position = new Vector3(-6f, -3.6f, 85);
+        player.transform.position = new Vector3(-5.5f, 32f, 85);
     }
 }

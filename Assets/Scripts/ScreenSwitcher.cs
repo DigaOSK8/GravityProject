@@ -10,6 +10,9 @@ public class ScreenSwitcher : MonoBehaviour
     public GameObject DestinationScreen;
     public GameObject MiddleScreen; //like splash screen
     public float TimeInMiddleScreen;
+    public bool Automatic = true;
+    public float OffsetX = 0.0f;
+    public float OffsetY = 0.0f;
 
     private bool started;
     private bool inMiddle;
@@ -17,7 +20,11 @@ public class ScreenSwitcher : MonoBehaviour
 
     void Start()
     {
-        started = true;
+        if(Automatic == true)
+        {
+            started = true;
+        }
+        
     }
 
     void Update()
@@ -55,8 +62,8 @@ public class ScreenSwitcher : MonoBehaviour
 
     void MoveCameraToFinalDestination()
     {
-        Camera.transform.position = new Vector3(DestinationScreen.transform.position.x,
-            DestinationScreen.transform.position.y,
+        Camera.transform.position = new Vector3(DestinationScreen.transform.position.x + OffsetX,
+            DestinationScreen.transform.position.y + OffsetY,
              Camera.transform.position.z);
     }
 
@@ -66,5 +73,9 @@ public class ScreenSwitcher : MonoBehaviour
             MiddleScreen.transform.position.y,
              Camera.transform.position.z);
         inMiddle = true;
+    }
+    public void Play()
+    {
+        started = true;
     }
 }
