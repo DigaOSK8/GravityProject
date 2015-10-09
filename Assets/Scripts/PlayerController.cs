@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour {
     public bool gravityChange = false;
     public float direction = 1f;
 
-    public int qualPlayer;  
+    public int qualPlayer;
+
+    public int LeftPlayerNumber = 0; // 0 - if gamepad1 = left / 1 - if gamepad1 = right
 
     public float moveSpeed;
     public float jumpHeight;
@@ -27,18 +29,47 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-
-        if(name == "Player 1")
+        var result = GameObject.Find("CharacterSelectController").GetComponent<CharacterSelectController>() as CharacterSelectController;
+        if(result.GetSelectResultByPlayer1()==0 && name == "Player 1")
         {
             axisX = "Horizontal1";
             buttonA = KeyCode.Joystick1Button0;
-        }else if(name == "Player 2")
+        }
+        else if (result.GetSelectResultByPlayer1() == 0 && name == "Player 2")
         {
             axisX = "Horizontal2";
             buttonA = KeyCode.Joystick2Button0;
         }
+        else if (result.GetSelectResultByPlayer1() == 1 && name == "Player 1")
+        {
+            axisX = "Horizontal2";
+            buttonA = KeyCode.Joystick2Button0;
+        }
+        else if (result.GetSelectResultByPlayer1() == 1 && name == "Player 2")
+        {
+            axisX = "Horizontal1";
+            buttonA = KeyCode.Joystick1Button0;
+        }
+        //if(name == "Player 1")
+        //{
+        //    axisX = "Horizontal1";
+        //    buttonA = KeyCode.Joystick1Button0;
+        //}else if(name == "Player 2")
+        //{
+        //    axisX = "Horizontal2";
+        //    buttonA = KeyCode.Joystick2Button0;
+        //}
     }
-
+    public void SetPlayerAs1()
+    {
+        axisX = "Horizontal1";
+        buttonA = KeyCode.Joystick1Button0;
+    }
+    public void SetPlayerAs2()
+    {
+        axisX = "Horizontal2";
+        buttonA = KeyCode.Joystick2Button0;
+    }
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
