@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed;
     public float jumpHeight;
     private float moveVelocity;
+    private string axisX;
+    private KeyCode buttonA;
+    private KeyCode buttonB;
+    private KeyCode buttonC;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -23,6 +27,16 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+
+        if(name == "Player 1")
+        {
+            axisX = "Horizontal1";
+            buttonA = KeyCode.Joystick1Button0;
+        }else if(name == "Player 2")
+        {
+            axisX = "Horizontal2";
+            buttonA = KeyCode.Joystick2Button0;
+        }
     }
 
     void FixedUpdate()
@@ -35,60 +49,30 @@ public class PlayerController : MonoBehaviour {
         SwapGravity();
 
         //anim.SetBool("Grounded", grounded);
-        if (name == "Player 1")
+       
+        if (Input.GetKeyDown(buttonA) && grounded)
         {
-            Debug.Log("Player 1");
-
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && grounded)
-            {
-                Jump();
-            }
-
-           
-
-            GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal1") * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-            //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
-            if (GetComponent<Rigidbody2D>().velocity.x > 0)
-            {
-                transform.localScale = new Vector3(1f, direction, 1f);
-            }
-            else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-            {
-                transform.localScale = new Vector3(-1f, direction, 1f);
-            }
+            Jump();
         }
 
-        if (name == "Player 2")
+        rigidbody2d.velocity = new Vector2(Input.GetAxis(axisX) * moveSpeed, rigidbody2d.velocity.y);
+
+        //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
+        if (rigidbody2d.velocity.x > 0)
         {
-            Debug.Log("Player 2");
-
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && grounded)
-            {
-                Jump();
-            }
-
-
-
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x + Input.GetAxis("Horizontal2") * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-            //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
-            if (GetComponent<Rigidbody2D>().velocity.x > 0)
-            {
-                transform.localScale = new Vector3(1f, direction, 1f);
-            }
-            else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-            {
-                transform.localScale = new Vector3(-1f, direction, 1f);
-            }
+            transform.localScale = new Vector3(1f, direction, 1f);
         }
+        else if (rigidbody2d.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, direction, 1f);
+        }     
+               
     }
 
     private void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+        rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
     }
 
     private void Move(float direction)
