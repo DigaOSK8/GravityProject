@@ -4,8 +4,11 @@ using System.Collections;
 public class LevelManager : MonoBehaviour {
 
     public GameObject currentCheckpoint;
+    public Collider2D[] checkpoint;
 
-    private PlayerController player;
+    public PlayerController player1;
+
+    public PlayerController player2;
 
     public GameObject deathParticle;
     public GameObject lifeParticle;
@@ -17,22 +20,25 @@ public class LevelManager : MonoBehaviour {
     private float gravityStore;
 
     // Use this for initialization
-    void Start() {
-        player = FindObjectOfType<PlayerController>();
+    void Awake()
+    {     
+        player1.transform.position = checkpoint[Random.Range(0, 6)].transform.position;
+        player2.transform.position = checkpoint[Random.Range(0, 6)].transform.position;
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
     }
 
-    public void RespawnPlayer()
+    public void RespawnPlayer(Collider2D player)
     {
-        StartCoroutine("RespawnPlayerCo");
+        StartCoroutine("RespawnPlayerCo", player);
         
     }
 
-    public IEnumerator RespawnPlayerCo()
+    public IEnumerator RespawnPlayerCo(Collider2D player)
     {
         Instantiate(deathParticle, player.transform.position, player.transform.rotation);
 
@@ -52,5 +58,5 @@ public class LevelManager : MonoBehaviour {
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
-    }
+    }    
 }
