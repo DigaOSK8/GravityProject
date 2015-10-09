@@ -19,12 +19,8 @@ public class Spike : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player 1") 
-        {
-            levelManager.RespawnPlayer(other);
-        } else if (other.name == "Player 2")
-        {
-            levelManager.RespawnPlayer(other);
-        }
+        
+        levelManager.RespawnPlayer(other);
+       
     }
 }

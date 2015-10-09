@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 3462758e8d46880439fe16a8eb624535
+timeCreated: 1444391550
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritePack_0
+    21300002: spritePack_3
+    21300004: spritePack_4
+    21300006: spritePack_7
+    21300008: spritePack_8
+    21300010: spritePack_9
+    21300012: spritePack_12
+    21300014: spritePack_13
+    21300016: spritePack_16
+    21300018: spritePack_18
+    21300020: spritePack_19
+    21300022: spritePack_20
+    21300024: spritePack_21
+    21300026: spritePack_22
+    21300028: spritePack_23
+    21300030: spritePack_25
+    21300032: spritePack_27
+    21300034: spritePack_31
+    21300036: spritePack_32
+    21300038: spritePack_46
+    21300040: spritePack_48
+    21300042: spritePack_49
+    21300044: spritePack_50
+    21300046: spritePack_53
+    21300048: spritePack_1
+    21300050: spritePack_2
+    21300052: spritePack_10
+    21300054: spritePack_11
+    21300056: spritePack_17
+    21300058: spritePack_26
+    21300060: spritePack_5
+    21300062: spritePack_6
+    21300064: spritePack_14
+    21300066: spritePack_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spritePack_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1239
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_3
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1298
+        width: 456
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_4
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 1239
+        width: 171
+        height: 171
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_7
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1185
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_8
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1297
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1072
+        width: 171
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1128
+        width: 456
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_13
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1072
+        width: 172
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_16
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 1071
+        width: 108
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_18
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 958
+        width: 172
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_19
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 846
+        width: 186
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_20
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 956
+        width: 168
+        height: 149
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_21
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 958
+        width: 172
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_22
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 846
+        width: 186
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_23
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 956
+        width: 168
+        height: 149
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 902
+        width: 171
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_27
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 902
+        width: 171
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_31
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 626
+        width: 163
+        height: 151
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_32
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 616
+        width: 162
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_46
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 445
+        width: 171
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_48
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 448
+        width: 171
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_49
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 416
+        width: 84
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_50
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 278
+        width: 172
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_53
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 108
+        width: 169
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_1
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 617
+        width: 173
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_2
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 613
+        width: 179
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_10
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 614
+        width: 170
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_11
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 616
+        width: 170
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_17
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 614
+        width: 170
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_26
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 617
+        width: 343
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_5
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1317
+        width: 116
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_6
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1147
+        width: 116
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_14
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1126
+        width: 114
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritePack_15
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 1296
+        width: 113
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

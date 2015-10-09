@@ -7,8 +7,7 @@ public class Teleporter : MonoBehaviour {
     public bool isHorizontal;
 
     void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("OI");
+    {       
         if (col.gameObject.tag.Equals("Player"))
         {
             if (isHorizontal)
