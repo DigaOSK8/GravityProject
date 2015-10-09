@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerManager : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
 
     private Rigidbody2D rigidbody2d;
     public bool gravityChange = false;
-    private float direction = 1f;
+    public float direction = 1f;
+
+    public int qualPlayer;  
 
     public float moveSpeed;
     public float jumpHeight;
@@ -18,9 +20,10 @@ public class PlayerManager : MonoBehaviour {
     public LayerMask whatIsGround;
     private bool grounded;
 
-    void Start () {
+    void Start()
+    {
         rigidbody2d = GetComponent<Rigidbody2D>();
-	}
+    }
 
     void FixedUpdate()
     {
@@ -32,37 +35,55 @@ public class PlayerManager : MonoBehaviour {
         SwapGravity();
 
         //anim.SetBool("Grounded", grounded);
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (name == "Player 1")
         {
-            Jump();
-        }        
+            Debug.Log("Player 1");
 
-        moveVelocity = 0f;
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && grounded)
+            {
+                Jump();
+            }
 
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            moveVelocity = moveSpeed;
+           
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal1") * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+            //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
+            if (GetComponent<Rigidbody2D>().velocity.x > 0)
+            {
+                transform.localScale = new Vector3(1f, direction, 1f);
+            }
+            else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-1f, direction, 1f);
+            }
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (name == "Player 2")
         {
-            moveVelocity = -moveSpeed;
+            Debug.Log("Player 2");
+
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && grounded)
+            {
+                Jump();
+            }
+
+
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x + Input.GetAxis("Horizontal2") * moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+            //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
+            if (GetComponent<Rigidbody2D>().velocity.x > 0)
+            {
+                transform.localScale = new Vector3(1f, direction, 1f);
+            }
+            else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-1f, direction, 1f);
+            }
         }
-
-        Move(moveVelocity);
-
-        //anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
-        if (GetComponent<Rigidbody2D>().velocity.x > 0)
-        {
-            transform.localScale = new Vector3(1f, direction, 1f);
-        }
-        else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-1f, direction, 1f);
-        }
-
     }
 
     private void Jump()
@@ -72,7 +93,7 @@ public class PlayerManager : MonoBehaviour {
 
     private void Move(float direction)
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(direction, GetComponent<Rigidbody2D>().velocity.y);
+        
     }
     
     public void SwapGravity()

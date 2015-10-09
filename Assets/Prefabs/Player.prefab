@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465674}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: GroundChecker
   m_TagString: Untagged
-  m_Icon: {fileID: -3545028842045912814, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -26,10 +26,10 @@ GameObject:
   - 50: {fileID: 5045406}
   - 61: {fileID: 6137066}
   - 114: {fileID: 11471894}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
-  m_Icon: {fileID: 8467475693731670952, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -99,13 +99,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityChange: 0
+  direction: 1
+  qualPlayer: 0
   moveSpeed: 5
   jumpHeight: 16
   groundCheck: {fileID: 465674}
   groundCheckRadius: .200000003
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -124,6 +126,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: jumpHeight
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: whatIsGround.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
