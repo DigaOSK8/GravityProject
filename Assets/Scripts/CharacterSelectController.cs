@@ -5,6 +5,8 @@ public class CharacterSelectController : MonoBehaviour
 {
     public GameObject TriangleP1;
     public GameObject TriangleP2;
+    public GameObject TriangleP1b;
+    public GameObject TriangleP2b;
     public GameObject CharactersBW;
     public GameObject CharactersColor;
     public GameObject ScreenSwitcher;
@@ -23,6 +25,8 @@ public class CharacterSelectController : MonoBehaviour
         CharactersBW = Instantiate(CharactersBW);
         TriangleP1 = Instantiate(TriangleP1);
         TriangleP2 = Instantiate(TriangleP2);
+        TriangleP1b = Instantiate(TriangleP1b);
+        TriangleP2b = Instantiate(TriangleP2b);
 
     }
 
@@ -33,8 +37,11 @@ public class CharacterSelectController : MonoBehaviour
         if (Input.GetKeyDown(buttonA))
         {
             CharactersColor = Instantiate(CharactersColor);
+            Destroy(TriangleP2);
+            Destroy(TriangleP1);
             Destroy(CharactersBW);
             ((ScreenSwitcher)ScreenSwitcher.GetComponent(typeof(ScreenSwitcher))).Play();
+            
             Destroy(this);
         }
         axisInput = Input.GetAxis(axisX);
@@ -43,6 +50,8 @@ public class CharacterSelectController : MonoBehaviour
         {
             MoveToLeft(TriangleP1);
             MoveToRight(TriangleP2);
+            MoveToLeft(TriangleP1b);
+            MoveToRight(TriangleP2b);
             selectedByPlayer1 = 0;
 
             var players = GameObject.FindGameObjectsWithTag("Player");
@@ -63,6 +72,8 @@ public class CharacterSelectController : MonoBehaviour
         {
             MoveToLeft(TriangleP2);
             MoveToRight(TriangleP1);
+            MoveToLeft(TriangleP2b);
+            MoveToRight(TriangleP1b);
             selectedByPlayer1 = 1;
             var players = GameObject.FindGameObjectsWithTag("Player");
             foreach (var player in players)

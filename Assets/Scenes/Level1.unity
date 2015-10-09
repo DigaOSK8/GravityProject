@@ -128,6 +128,14 @@ Prefab:
       propertyPath: ScreenSwitcher
       value: 
       objectReference: {fileID: 2144213927}
+    - target: {fileID: 11495342, guid: 60a6cd923af0cc44c9e852f2c34a9530, type: 2}
+      propertyPath: TriangleP1b
+      value: 
+      objectReference: {fileID: 116668, guid: 03f2d49e57b43a54998029d59dfb89ac, type: 2}
+    - target: {fileID: 11495342, guid: 60a6cd923af0cc44c9e852f2c34a9530, type: 2}
+      propertyPath: TriangleP2b
+      value: 
+      objectReference: {fileID: 131272, guid: 1937942ee2de64947b40038a65fa2353, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60a6cd923af0cc44c9e852f2c34a9530, type: 2}
   m_IsPrefabParent: 0
